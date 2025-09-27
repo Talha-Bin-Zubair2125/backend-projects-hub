@@ -1,0 +1,161 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* Container */
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.main-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2563eb;
+}
+
+/* Form Styling */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.input-box,
+.textarea-box {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-box:focus,
+.textarea-box:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Button Variants */
+.btn.primary {
+  background: #2563eb;
+}
+
+.btn.success {
+  background: #16a34a;
+}
+
+.btn.info {
+  background: #0891b2;
+}
+
+.btn.primary:hover {
+  background: #1d4ed8;
+}
+
+.btn.success:hover {
+  background: #15803d;
+}
+
+.btn.info:hover {
+  background: #0e7490;
+}
+
+/* File List */
+.file-list {
+  margin-top: 35px;
+}
+
+.list-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.file-item {
+  background: #f3f4f6;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.file-item:hover {
+  transform: translateY(-3px);
+  background: #e0f2fe;
+}
+
+.file-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.file-content {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
