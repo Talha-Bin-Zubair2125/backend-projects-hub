@@ -1,0 +1,153 @@
+1. Headings
+
+Markdown:
+
+# H1
+## H2
+### H3
+
+
+
+
+2. Paragraphs
+This is a paragraph.
+
+This is another paragraph.
+
+
+
+
+3. Line breaks (soft/hard)
+
+Soft break (default): single newline usually becomes a space.
+
+Hard break (two spaces at end-of-line or enable breaks option).
+
+Example (hard break):
+
+Line 1␣␣
+Line 2
+
+
+
+4. Emphasis / Strong / Combined
+*italic*  _italic_
+**bold**  __bold__
+**_bold+italic_**
+
+
+Becomes <em>, <strong>, and nested tags.
+
+5. Strikethrough (GFM)
+This is ~~deleted~~ text.
+
+
+Produces <del>deleted</del> (GFM support).
+
+6. Blockquotes
+> A quote
+>
+> > Nested quote
+
+
+Becomes <blockquote>...</blockquote> (nested allowed).
+
+7. Lists
+
+Unordered:
+
+- Item A
+- Item B
+  - Subitem
+* Another style
+
+
+Ordered:
+
+1. First
+2. Second
+
+
+Produces <ul> / <ol> and nested lists.
+
+8. Task lists (GFM)
+- [ ] todo item
+- [x] done item
+
+
+Renders as list items containing checkboxes (HTML <input type="checkbox" disabled> in many renderers). marked supports this GFM feature. 
+marked.js.org
+
+9. Code — inline and fenced blocks
+
+Inline:
+
+Use `const x = 1;` inline.
+
+
+Block/fenced (with language hint):
+
+```js
+function sum(a,b){ return a+b; }
+
+`marked` outputs `<code>` for inline, and `<pre><code class="language-js">...</code></pre>` for fences — good for client-side syntax highlighting libraries to hook into.
+
+---
+
+### 10. Horizontal rule
+```md
+---
+***
+___
+
+
+Produces <hr>.
+
+11. Links (inline, reference, automatic)
+
+Inline:
+
+[Google](https://www.google.com)
+
+
+Reference:
+
+[ref]: https://example.com
+[link to ref][ref]
+
+
+Autolink / email: <https://example.com> becomes a link.
+
+You can customize link rendering via a custom renderer to add target/rel attributes. 
+marked.js.org
+
+12. Images
+![alt text](https://example.com/image.png "title")
+
+
+Renders <img src="..." alt="..." title="...">. marked will pass through image attributes; you can override rendering if needed.
+
+13. Tables (GFM)
+| Name | Age |
+| ---- | ---:|
+| Alice|  30 |
+| Bob  |  25 |
+
+
+Produces <table><thead>... etc. Table alignment support (left/center/right) is supported by GFM parsing.
+
+14. Inline HTML passthrough
+
+You can embed raw HTML:
+
+<div class="note">Note text</div>
+
+
+marked will output that HTML unless you sanitize/strip — use sanitize or external sanitizer if you need to restrict allowed HTML. 
+GitHub
+
+15. Escaping special chars
+
+Use backslash:
+
+\*not italic\*

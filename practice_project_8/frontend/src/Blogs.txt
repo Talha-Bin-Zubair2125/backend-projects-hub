@@ -1,0 +1,44 @@
+[
+  {
+    "ID": 1,
+    "Blog_Heading": "The Future of Artificial Intelligence",
+    "Blog_Content": "Artificial Intelligence is transforming industries from healthcare to finance. In the next decade, AI will become even more integrated into daily life, automating complex decisions and enhancing human creativity.",
+    "Blog_Author": "Talha Bin Zubair",
+    "Blog_Published_Date": "2025-09-10"
+  },
+  {
+    "ID": 2,
+    "Blog_Heading": "Mastering React Hooks in 2025",
+    "Blog_Content": "React Hooks have revolutionized the way developers manage state and side effects. Understanding useState, useEffect, and custom hooks can significantly improve your React projects.",
+    "Blog_Author": "Ayesha Malik",
+    "Blog_Published_Date": "2025-08-25"
+  },
+  {
+    "ID": 3,
+    "Blog_Heading": "Building Scalable APIs with Express.js",
+    "Blog_Content": "Express.js is a lightweight and flexible Node.js framework. It allows developers to build powerful REST APIs with minimal effort while maintaining performance and scalability.",
+    "Blog_Author": "Talha Bin Zubair",
+    "Blog_Published_Date": "2025-07-14"
+  },
+  {
+    "ID": 4,
+    "Blog_Heading": "Understanding MongoDB: A Beginner’s Guide",
+    "Blog_Content": "MongoDB stores data as flexible JSON-like documents. This makes it ideal for projects where data structure evolves over time. Learn how CRUD operations work in MongoDB.",
+    "Blog_Author": "Zain Ahmad",
+    "Blog_Published_Date": "2025-06-05"
+  },
+  {
+    "ID": 5,
+    "Blog_Heading": "The Rise of Augmented Reality Applications",
+    "Blog_Content": "AR is reshaping how we interact with digital content. From education to retail, AR applications are enhancing user engagement and making digital experiences more immersive.",
+    "Blog_Author": "Fatima Khan",
+    "Blog_Published_Date": "2025-05-20"
+  },
+  {
+    "ID": 6,
+    "Blog_Heading": "Best Practices for Writing Clean JavaScript Code",
+    "Blog_Content": "Clean code is maintainable, readable, and efficient. Follow best practices like meaningful naming, modular functions, and proper commenting to write professional JavaScript.",
+    "Blog_Author": "Talha Bin Zubair",
+    "Blog_Published_Date": "2025-04-30"
+  }
+]

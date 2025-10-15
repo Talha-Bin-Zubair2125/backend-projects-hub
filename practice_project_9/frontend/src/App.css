@@ -1,0 +1,168 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.weather-bg {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Clouds Animation */
+.cloud {
+  position: absolute;
+  top: 15%;
+  left: -200px;
+  width: 200px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  animation: moveCloud 30s linear infinite;
+}
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: -25px;
+}
+.cloud::before {
+  left: 10px;
+}
+.cloud::after {
+  right: 10px;
+}
+.cloud2 {
+  top: 35%;
+  animation-delay: 12s;
+  opacity: 0.8;
+}
+@keyframes moveCloud {
+  from {
+    left: -250px;
+  }
+  to {
+    left: 110%;
+  }
+}
+
+/* Weather Card */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 380px;
+  text-align: center;
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.title {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  width: 200px;
+  font-size: 16px;
+}
+button {
+  border: none;
+  background: linear-gradient(135deg, #2af598, #009efd);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+  margin-top: 15px;
+}
+
+.error {
+  color: #ffdddd;
+  background: rgba(255, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.placeholder {
+  color: #e8f0ff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+.info-value {
+  font-size: 15px;
+  margin-top: 5px;
+}
